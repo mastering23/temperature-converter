@@ -8,15 +8,16 @@ const convertToCelsius = () => {
   const FahrenheitValue = userPrompt();
 
   const celsiusTemp = (FahrenheitValue - 32) * (5 / 9);
+  console.log();
 
   return Math.floor(celsiusTemp);
 };
 
 const describeTemperature = () => {
   const celsiusValue = convertToCelsius();
-
+  let message = ``;
   if (celsiusValue < 32) {
-    let message = `Today Temperature is ${celsiusValue} a very cold day!`;
+    message = `Today Temperature is ${celsiusValue} a very cold day!`;
   } else if (celsiusValue < 64) {
     message = `Today Temperature is ${celsiusValue} a cold day!`;
   } else if (celsiusValue < 86) {
