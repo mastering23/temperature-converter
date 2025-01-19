@@ -1,14 +1,16 @@
 const userPrompt = () => {
+
   const userInput = prompt(`Enter Fahrenheit temperature value : `);
 
   return Number(userInput);
+
 };
 
 const convertToCelsius = () => {
+  
   const FahrenheitValue = userPrompt();
 
   const celsiusTemp = (FahrenheitValue - 32) * (5 / 9);
-  console.log();
 
   return Math.floor(celsiusTemp);
 };
